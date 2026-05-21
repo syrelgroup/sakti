@@ -75,8 +75,11 @@ export default function MainLayout({
             </div>
             {!isCollapsed && (
               <span className="font-black text-lg tracking-tighter whitespace-nowrap">
-                <span className="text-orange-500">HASA</span>
-                <span className="text-green-600">MITRA</span>
+                {/* <span className="text-orange-500">HASA</span> */}
+                {/* <span className="text-green-600">MITRA</span> */}
+                <span className="text-blue-600">
+                  {import.meta.env.VITE_COMPANY_BRAND}
+                </span>
               </span>
             )}
           </div>

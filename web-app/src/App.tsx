@@ -25,7 +25,7 @@ export default function App() {
             'Cambria, Cochin, Georgia, Times, "Times New Roman", serif',
 
           // Opsional: Anda juga bisa menyamakan warna utama (Orange Hasamitra)
-          colorPrimary: "#F58220",
+          colorPrimary: "#4287f5",
           borderRadius: 8, // Agar roundness-nya senada dengan rounded-xl
         },
       }}

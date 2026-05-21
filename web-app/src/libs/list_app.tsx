@@ -82,6 +82,7 @@ export const menus: IMenu[] = [
     path: "/app/dashboard",
     icon: <SquareDashedKanbanIcon size={20} />,
     need_access: true,
+    can_access: ["read"],
   },
   {
     name: "Profile",

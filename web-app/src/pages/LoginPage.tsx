@@ -12,7 +12,7 @@ import api from "../libs/api";
 import useContext from "../libs/context";
 import { useNavigate } from "react-router-dom";
 
-const APP_COLOR = import.meta.env.VITE_APP_COLOR || "#F58220";
+const APP_COLOR = import.meta.env.VITE_APP_COLOR || "#4287f5";
 
 function LoginPage() {
   const [selectedApp, setSelectedApp] = useState<AppType>("earsip");
@@ -60,14 +60,18 @@ function LoginPage() {
   }, [user]);
 
   return (
-    <div
-      className="min-h-screen bg-gray-50 flex items-center justify-center"
-      style={{
-        backgroundImage: "url(/assets/build.jpeg)",
-        backgroundSize: "contain",
-      }}
-    >
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl flex flex-col md:flex-row overflow-hidden border border-gray-100 ">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/assets/login-bg.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
+      <div className="relative z-10 bg-white rounded-2xl shadow-2xl w-full max-w-5xl flex flex-col md:flex-row overflow-hidden border border-gray-100">
         {/* --- Bagian Kiri: Pilihan Aplikasi --- */}
         <div
           style={{ backgroundColor: APP_COLOR }}
@@ -78,10 +82,10 @@ function LoginPage() {
               <Building2 className="w-9 h-9" />
               <div className="flex flex-col">
                 <h1 className="text-2xl font-bold leading-tight">
-                  BPR HASAMITRA
+                  {import.meta.env.VITE_COMPANY_NAME}
                 </h1>
                 <p className="text-xs font-light tracking-widest uppercase opacity-80">
-                  Jawa Barat
+                  {import.meta.env.VITE_APP_NAME}
                 </p>
               </div>
             </div>

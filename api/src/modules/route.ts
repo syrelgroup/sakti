@@ -96,6 +96,7 @@ export const DashboardAbsensi = async (req: Request, res: Response) => {
       include: {
         Absence: true,
         UserCost: true,
+        Position: true,
       },
     }),
     prisma.deduction.findMany({ where: { status: true } }),
@@ -156,6 +157,7 @@ export const DashboardEarsip = async (req: Request, res: Response) => {
     mitra,
     asuransi,
     payoffice,
+    collending,
   });
 };
 
