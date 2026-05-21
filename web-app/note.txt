@@ -1,9 +1,0 @@
-EARSIP
-- Submission = Expand Table Riwayat Visit dan CollateralLending
-
-CALLREPORT
-- Rencana Kunjungan
-- Tabel Kunjungan
-
-ABSENSI
-- Semua
