@@ -199,12 +199,12 @@ const DailyReportAbsence = () => {
   const daysHeader = useMemo(() => {
     // Range dari tanggal 21 bulan sebelumnya sampai tanggal 20 bulan sekarang
     const currentMonth = moment(month);
-    const previousMonth = currentMonth.clone().subtract(1, "month");
+    // const previousMonth = currentMonth.clone().subtract(1, "month");
 
     // Start: tanggal 21 bulan sebelumnya
-    const startDate = previousMonth.clone().date(21);
+    const startDate = currentMonth.clone().startOf("month");
     // End: tanggal 20 bulan sekarang
-    const endDate = currentMonth.clone().date(20);
+    const endDate = currentMonth.clone().endOf("month");
 
     // Hitung jumlah hari antara start dan end (inclusive)
     const daysCount = endDate.diff(startDate, "days") + 1;

@@ -41,19 +41,17 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment(month as string)
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
                     lte: moment(month as string)
-                      .set("date", 20)
-                      .endOf("day")
+                      .endOf("month")
                       .toDate(),
                   },
                 }
               : {
                   created_at: {
-                    gte: moment().set("date", 21).startOf("day").toDate(),
-                    lte: moment().set("date", 20).endOf("day").toDate(),
+                    gte: moment().startOf("month").toDate(),
+                    lte: moment().endOf("month").toDate(),
                   },
                 }),
             status: true,
@@ -66,12 +64,10 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment(month as string)
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
                     lte: moment(month as string)
-                      .set("date", 20)
-                      .endOf("day")
+                      .endOf("month")
                       .toDate(),
                   },
                 }
@@ -79,10 +75,9 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment()
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
-                    lte: moment().set("date", 20).endOf("day").toDate(),
+                    lte: moment().endOf("month").toDate(),
                   },
                 }),
           },
@@ -99,12 +94,10 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment(month as string)
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
                     lte: moment(month as string)
-                      .set("date", 20)
-                      .endOf("day")
+                      .endOf("month")
                       .toDate(),
                   },
                 }
@@ -112,10 +105,9 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment()
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
-                    lte: moment().set("date", 20).endOf("day").toDate(),
+                    lte: moment().endOf("month").toDate(),
                   },
                 }),
             status: true,
@@ -129,12 +121,10 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment(month as string)
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
                     lte: moment(month as string)
-                      .set("date", 20)
-                      .endOf("day")
+                      .endOf("month")
                       .toDate(),
                   },
                 }
@@ -142,10 +132,9 @@ export const GET = async (req: Request, res: Response, next: NextFunction) => {
                   created_at: {
                     gte: moment()
                       .subtract(1, "month")
-                      .set("date", 21)
-                      .startOf("day")
+                      .startOf("month")
                       .toDate(),
-                    lte: moment().set("date", 20).endOf("day").toDate(),
+                    lte: moment().endOf("month").toDate(),
                   },
                 }),
             status: true,
