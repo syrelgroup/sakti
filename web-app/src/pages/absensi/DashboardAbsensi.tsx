@@ -8,7 +8,6 @@ import {
   CalendarDays,
   AlertTriangle,
   Wallet,
-  Percent,
 } from "lucide-react";
 import {
   BarChart,
