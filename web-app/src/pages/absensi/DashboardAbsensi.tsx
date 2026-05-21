@@ -608,7 +608,7 @@ export default function DashboardAbsensi() {
               Berkas perizinan masuk dalam siklus berjalan
             </p>
           </div>
-          <div className="space-y-3 overflow-y-auto max-h-[350px] pr-1">
+          <div className="space-y-3 overflow-y-auto max-h-87.5 pr-1">
             {dataPayload.permit.length === 0 ? (
               <div className="text-center py-8 text-xs text-slate-400 font-medium">
                 Belum ada pengajuan izin/cuti.
